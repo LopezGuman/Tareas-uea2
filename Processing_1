@@ -1,1 +1,27 @@
+void setup() {
+  // tamaño del lienzo
+  size(600, 600);
+  // color del fondo
+  background(0, 0, 255);
+}
 
+void draw() {
+  //color del circulo
+  fill(60,10,60);
+  //figura circular
+  ellipse(200,200,45,45);
+  //color del rectangulo
+  fill(10,65,90);
+  //figura rectangular
+  rect(60,170,40,70);
+  //color de la linea
+  fill(150,60,70);
+  //grosor y longitud de linea
+  line(50,35,70,125);
+  //color triangular
+  fill(60,165,200);
+  //figura triangular
+  triangle(160,200,75,20,270,40);
+  //linea de texto
+  text("Hola, WAZAAAA", width/3, height/0);
+}
