@@ -1,0 +1,46 @@
+//vuelvame a enseñar subir carpetas, ya no quiere :'v
+//arrays
+// declaro la variable arreglo rX
+int[] rX = {40, 70, 100, 130};
+//escribe un array de 4 índices para posición y de rect
+//coloca los valores en los 4  rect
+int[] rY = {30, 50, 200, 40};
+int y= 0;
+
+void setup() {
+  //tamaño completo del lienzo
+  fullScreen();
+  //color del fondo
+  background(151, 59, 142);
+  frameRate (30);
+}
+
+void draw() {
+  // declaro variable de imagen
+  PImage img;
+  // ruta de la imagen
+  img = loadImage("Kiosco_lerma.jpeg");
+  // cargo la imagen en una posición xy
+  image(img, 650, 70, 750, 900);
+
+  float r = random(200, 255);
+  //color del circulo
+  fill(0, 195, 255);
+  //figura circular
+  ellipse(300 + y, rY[3], 700, 150);
+  //tamaño del texto
+  textSize(35);
+  //linea de texto de la sala y su posicion en la imagen
+  text("SALA HOMOSEXUAL ESTE 2024 AAAAA", y, rY[1]);
+  //color del texto
+  fill(200, 200, 45);
+  //linea de texto del nombre del artista y su posicion en la imagen
+  text("PRESENTADO POR MARCO GOL FELIPE", y, rY[1]);
+  //color del texto
+  fill(200, 200, 45);
+  //linea de texto de la fecha de duracion y su posicion en la imagen
+  text("DISPONIBLE DEL 10 AL 29 DE SEPTIEMBRE", y, rY[1]);
+  //color del texto
+  fill(200, 200, 45);
+  y = (y+1)%width;
+}
